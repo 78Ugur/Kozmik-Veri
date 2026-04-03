@@ -110,15 +110,95 @@
         #result-text { margin-top: 20px; font-size: 1.5rem; color: #da70d6; font-family: 'Orbitron'; text-align: center; }
 
         /* FOOTER */
-        footer { background: rgba(10, 0, 20, 0.8); border-top: 1px solid #da70d6; padding: 60px 20px; text-align: center; margin-top: 50px; }
-        .footer-container { max-width: 1000px; margin: 0 auto; }
-        .footer-title { font-family: 'Orbitron'; color: #da70d6; letter-spacing: 3px; margin-bottom: 20px; font-size: 1.5rem; }
-        .team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 40px; }
-        .team-member { background: rgba(218, 112, 214, 0.1); padding: 10px 25px; border-radius: 50px; border: 1px solid rgba(218, 112, 214, 0.3); font-family: 'Orbitron'; font-size: 0.9rem; color: #d8bfff; }
-        .contact-info { margin-top: 30px; }
-        .contact-link { color: #fff; text-decoration: none; margin: 0 15px; font-size: 1.2rem; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; }
-        .contact-link:hover { color: #da70d6; text-shadow: 0 0 10px #da70d6; }
-        .copyright { margin-top: 40px; color: #444; font-size: 0.8rem; letter-spacing: 5px; }
+        footer {
+            background-color: #121212; /* Görseldeki koyu gri/siyah */
+            border-top: 1px solid #333;
+            padding: 40px 0 20px 0;
+            color: white;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 3 Sütunlu Izgara */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-title {
+            color: #3498db; /* Görseldeki mavi renk */
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: none; /* Orbitron gibi hep büyük değil */
+            letter-spacing: normal;
+        }
+
+        .footer-text {
+            color: #efefef;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* İletişim Listesi */
+        .contact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            color: #3498db;
+            width: 20px;
+        }
+
+        .contact-link {
+            color: #fff;
+            text-decoration: underline; /* Görseldeki gibi altı çizili */
+        }
+
+        /* Instagram Kısmı */
+        .social-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .instagram-icon {
+            background: white;
+            color: black;
+            padding: 4px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+        }
+
+        /* En Alt Çizgi ve Telif */
+        .footer-bottom {
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
 
     </style>
 </head>
@@ -224,27 +304,40 @@
 
     <footer>
         <div class="footer-container">
-            <h2 class="footer-title">PROJE HAKKINDA</h2>
-            <p style="color: #ccc; margin-bottom: 30px;">Karabük Demir Çelik Anadolu Lisesi projeleri ve topluluk çalışmaları.</p>
-            
-            <div class="team-grid">
-                <div class="team-member">Merve Beyda KARAGÖZ (Lider)</div>
-                <div class="team-member">Mevlüt Eymen MISIRLI (İçerik Editörü)</div>
-                <div class="team-member">Abdullah Uğur KÜÇÜKKARA (Yazılım&Tasarım)</div>
-                <div class="team-member">Kaan Burak KAYA (Yazılım&Tasarım)</div>
-                <div class="team-member">Umut Arda AĞAR (İçerik Üreticisi)</div>
+            <div class="footer-grid">
+                
+                <div class="footer-section">
+                    <h2 class="footer-title">Hakkımızda</h2>
+                    <p class="footer-text">Karabük Demir Çelik Anadolu Lisesi projeleri ve topluluk çalışmaları.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h2 class="footer-title">İletişim</h2>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karabük Demir Çelik Anadolu Lisesi</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:sertifikalicelikciler@gmail.com" class="contact-link">sertifikalicelikciler@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h2 class="footer-title">Takipte Kalın</h2>
+                    <a href="https://www.instagram.com/sertifikalicelikciler/" target="_blank" class="social-box">
+                        <span>sertifikalicelikciler</span>
+                        <i class="fab fa-instagram instagram-icon"></i>
+                    </a>
+                </div>
+
             </div>
 
-            <div class="contact-info">
-                <a href="mailto:sertifikalicelikciler@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> sertifikalicelikciler@gmail.com
-                </a>
-                <a href="https://www.instagram.com/sertifikalicelikciler" target="_blank" class="contact-link">
-                    <i class="fab fa-instagram"></i> @sertifikalicelikciler
-                </a>
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Sertifikalı Çelikçiler | Tüm Hakları Saklıdır.</div>
             </div>
-
-            <div class="copyright">SERTİFİKALI-ÇELİKÇİLER // 2026 // TÜM HAKLARI SAKLIDIR</div>
         </div>
     </footer>
 
